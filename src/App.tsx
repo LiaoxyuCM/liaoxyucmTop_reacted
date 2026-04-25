@@ -1,6 +1,10 @@
 import './App.css'
 
-function Template(elem) {
+interface Extending {
+  element: React.ComponentType;
+}
+
+function Template(elem: Extending) {
   return (
     <>
       <nav>
