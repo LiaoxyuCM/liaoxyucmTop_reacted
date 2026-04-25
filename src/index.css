@@ -267,24 +267,24 @@ button.selected {
 	border-bottom-right-radius: 8px;
 }
 
-hint {
+.hint {
 	display: flex;
 	align-items: center;
 	padding: 10px;
 	border-radius: 5px;
 }
 
-hint.error {
+.hint.error {
 	border-left: 2px solid var(--hint-err-fg-color);
 	background-color: var(--hint-err-bg-color);
 	color: var(--hint-err-fg-color);
 }
-hint.warn {
+.hint.warn {
 	border-left: 2px solid var(--hint-warn-fg-color);
 	background-color: var(--hint-warn-bg-color);
 	color: var(--hint-warn-fg-color);
 }
-hint.success {
+.hint.success {
 	border-left: 2px solid var(--hint-suc-fg-color);
 	background-color: var(--hint-suc-bg-color);
 	color: var(--hint-suc-fg-color);

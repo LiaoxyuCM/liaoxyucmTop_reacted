@@ -8,6 +8,9 @@ function HomepageContent() {
         <input name="q" placeholder="在必应搜索" style={{ flex: 1 }} />
         <button type="submit">=&gt;</button>
       </form>
+      <div className="hint warn">
+        <p>该网站使用React重写</p>
+      </div>
       <div className="cards">
         <a href="https://github.com/LiaoxyuCM">
           <div className="card">
