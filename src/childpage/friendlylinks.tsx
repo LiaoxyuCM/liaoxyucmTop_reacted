@@ -1,5 +1,5 @@
 import '../index.css';
-import './friendlylinks.css';
+import './css/friendlylinks.css';
 
 function FriendlyLinksContent() {
   return (

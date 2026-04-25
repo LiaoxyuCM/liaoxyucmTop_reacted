@@ -1,4 +1,4 @@
-import './style.css';
+import './css/index.css';
 import '../index.css';
 import { useState, useEffect } from 'react';
 function HomepageContent() {
