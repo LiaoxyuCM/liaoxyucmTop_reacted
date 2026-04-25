@@ -1,18 +1,18 @@
-import { useState } from 'react'
 import './App.css'
 
-function Template() {
+function Template(elem) {
   return (
     <>
       <nav>
-	    <a href="https://liaoxyucm.top">LiaoxyuCM</a>
-	    <div className="pc">
-		  <a href="https://github.com/LiaoxyuCM" target="_blank">GitHub</a>
-		  <a href="https://liaoxyucm.top/friendlylinks">友链</a>
-	    </div>
+        <a href="/">LiaoxyuCM</a>
+        <div className="pc">
+          <a href="https://github.com/LiaoxyuCM" target="_blank">GitHub</a>
+          <a href="/friendlylinks">友链</a>
+        </div>
       </nav>
       <div className="mainpare">
         <main>
+          <elem.element />
         </main>
       </div>
       <section className="footer">
