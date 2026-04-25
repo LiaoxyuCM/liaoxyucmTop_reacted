@@ -12,11 +12,19 @@ function HomepageContent() {
         <p>该网站使用React重写</p>
       </div>
       <div className="cards">
-        <a href="https://github.com/LiaoxyuCM">
+        <a href="https://github.com/LiaoxyuCM/liaoxyucmTop_reacted" target="_blank">
           <div className="card">
-            <h3>我的github</h3>
+            <h3>本站仓库</h3>
             <p className="description">
-              淘点好玩的~
+              查看本站的源代码
+            </p>
+          </div>
+        </a>
+        <a href="https://github.com/LiaoxyuCM/liaoxyucmTop_reacted/issues" target="_blank">
+          <div className="card">
+            <h3>反馈问题</h3>
+            <p className="description">
+              发现Bug? 或者有任何建议?
             </p>
           </div>
         </a>
