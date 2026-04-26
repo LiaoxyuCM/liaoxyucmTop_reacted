@@ -1,0 +1,80 @@
+function Styletest() {
+  return (
+    <>
+      <h1>一级标题h1</h1>
+      <h2>二级标题h2</h2>
+      <h3>三级标题h3</h3>
+      <h4>四级标题h4</h4>
+      <h5>五级标题h5</h5>
+      <h6>六级标题h6</h6>
+      <p>文本段p<strong>粗体strong</strong><em>斜体em</em><u>下划线u</u><del>删除del</del></p>
+      <a href="javascript:;">链接a</a>
+      <button>按钮button</button>
+      <div className="buttongroup">
+        <button>按钮1 .buttongroup&gt;button+</button>
+        <button>按钮2</button>
+        <button className="selected">高亮的按钮button.selected</button>
+      </div>
+      <input type="text" placeholder="文本框input" />
+      <textarea placeholder="文本域textarea"></textarea>
+      <select>
+        <option value="one">选择1 select&gt;option+</option>
+        <option value="two">选择2</option>
+        <option value="three">选择3</option>
+      </select>
+      <div className="hint error">错误提示.hint.error</div>
+      <div className="hint warn">警告提示.hint.warn</div>
+      <div className="hint success">成功提示.hint.success</div>
+      <ul>
+        <li>列表ul&gt;li+</li>
+        <li>列表</li>
+        <li>列表</li>
+      </ul>
+      <div className="cards">
+        <a href="javascript:;">
+          <div className="card">
+            <h3>卡片</h3>
+            <p className="description">div.cards&gt;a+&gt;div.card&gt;{"{h3, p.description}"}</p>
+          </div>
+        </a>
+        <a href="javascript:;">
+          <div className="card">
+            <h3>卡片</h3>
+            <p className="description">Lorem ipsum dolor sit amet.</p>
+          </div>
+        </a>
+        <a href="javascript:;">
+          <div className="card">
+            <h3>卡片</h3>
+            <p className="description">Lorem ipsum dolor sit amet.</p>
+          </div>
+        </a>
+      </div>
+      <table>
+        <tr>
+          <th>表格列table&gt;tr&gt;th+</th>
+          <th>表格列</th>
+        </tr>
+        <tr>
+          <td>表格值table&gt;tr+&gt;td+</td>
+          <td>表格值</td>
+        </tr>
+        <tr>
+          <td>表格值</td>
+          <td>表格值</td>
+        </tr>
+      </table>
+      <div className="timeline">
+        <div className="timeline-item">
+          <div className="timeline-dot"></div>
+          <div className="timeline-date">时间线</div>
+          <div className="timeline-content">
+            <p>.timeline&gt;.timeline-item+&gt;{"{.timeline-dot, .timeline-date, .timeline-content&gt;p}"}</p>
+          </div>
+        </div>
+      </div>
+    </>
+  )
+}
+
+export default Styletest

@@ -1,11 +1,12 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import './index.css'
+import './index.scss'
 import Template from './App.tsx'
 import Homepage from './childpage/index.tsx'
 import FriendlyLinksContent from './childpage/friendlylinks.tsx'
 import FourZeroFour from './childpage/404.tsx'
+import Styletest from './childpage/styletest.tsx'
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
   {
     "path": "/friendlylinks",
     "element": <Template element={FriendlyLinksContent} />
+  },
+  {
+    "path": "/styletest",
+    "element": <Template element={Styletest} />
   },
   {
     "path": "*",

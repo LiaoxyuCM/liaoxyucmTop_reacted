@@ -1,6 +1,3 @@
-import '../index.css';
-import './css/friendlylinks.css';
-
 function FriendlyLinksContent() {
   return (
     <div className="cards frdlylnks">
