@@ -169,7 +169,22 @@ h1 {
   text-align: center;
   letter-spacing: -0.02em;
 }
+
+@function generate-arrowdown-img($theme) {
+  $basetext-part1: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23";
+  $basetext-part2: "' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E";
+  @if $theme == 'dark' {
+    @return $basetext-part1 + "475569" + $basetext-part2;
+  } @else if $theme == 'light' {
+    @return $basetext-part1 + "cbd5e1" + $basetext-part2;
+  } @else {
+    @error "Invalid theme."
+  }
+};
+
 select {
+  @include conffonts;
+
   appearance: none;
   -webkit-appearance: none;
   padding: 8px 35px 8px 12px;
@@ -185,9 +200,9 @@ select {
   color: var(--body-text-color);
   box-shadow: 0 1px 2px var(--card-shadow-color);
     
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23475569' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-image: url("#{generate-arrowdown-img('dark')}");
   @media (prefers-color-scheme: dark) {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23cbd5e1' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+    background-image: url("#{generate-arrowdown-img('light')}");
   }
   
   background-repeat: no-repeat;

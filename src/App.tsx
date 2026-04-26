@@ -1,4 +1,5 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next';
 // import './index.scss'
 
 interface Extending {
@@ -6,13 +7,25 @@ interface Extending {
 }
 
 function Template(elem: Extending) {
+  const {t, i18n} = useTranslation();
+
   return (
     <>
       <nav>
         <a href="/">LiaoxyuCM</a>
         <div className="pc">
+          <a href="#" onClick={
+            (e) => {
+              e.preventDefault();
+              if (i18n.language === 'zh-CN') {
+                i18n.changeLanguage('en');
+              } else {
+                i18n.changeLanguage('zh-CN');
+              }
+            }
+          }>{t("translate.anotherlang")}</a>
           <a href="https://github.com/LiaoxyuCM" target="_blank">GitHub</a>
-          <a href="/friendlylinks">友链</a>
+          <a href="/friendlylinks">{t("index.nav.frdlylnks")}</a>
         </div>
       </nav>
       <div className="mainpare">

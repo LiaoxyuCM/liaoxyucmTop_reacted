@@ -1,77 +1,95 @@
+import { Card, Timeline } from "./modules/components"
+import { useTranslation } from 'react-i18next'
+
 function Styletest() {
+  const { t } = useTranslation();
   return (
     <>
-      <h1>一级标题h1</h1>
-      <h2>二级标题h2</h2>
-      <h3>三级标题h3</h3>
-      <h4>四级标题h4</h4>
-      <h5>五级标题h5</h5>
-      <h6>六级标题h6</h6>
-      <p>文本段p<strong>粗体strong</strong><em>斜体em</em><u>下划线u</u><del>删除del</del></p>
-      <a href="javascript:;">链接a</a>
-      <button>按钮button</button>
+      <h1>{t("teststyle.h1")} h1</h1>
+      <h2>{t("teststyle.h2")} h2</h2>
+      <h3>{t("teststyle.h3")} h3</h3>
+      <h4>{t("teststyle.h4")} h4</h4>
+      <h5>{t("teststyle.h5")} h5</h5>
+      <h6>{t("teststyle.h6")} h6</h6>
+      <p>
+        {t("teststyle.p")} p
+        <strong>{t("teststyle.strong")} strong</strong>
+        <em>{t("teststyle.em")} em</em>
+        <u>{t("teststyle.u")} u</u>
+        <del>{t("teststyle.del")} del</del>
+      </p>
+      <a href="#" onClick={(e)=>{e.preventDefault()}}>
+        {t("teststyle.a")} a
+      </a>
+      <button>{t("teststyle.button")} button</button>
       <div className="buttongroup">
-        <button>按钮1 .buttongroup&gt;button+</button>
-        <button>按钮2</button>
-        <button className="selected">高亮的按钮button.selected</button>
+        <button>{t("teststyle.button")} 1 .buttongroup&gt;button+</button>
+        <button>{t("teststyle.button")} 2</button>
+        <button className="selected">
+          {t("teststyle.button.highlighted")} button.selected
+        </button>
       </div>
-      <input type="text" placeholder="文本框input" />
-      <textarea placeholder="文本域textarea"></textarea>
+      <input type="text" placeholder={t("teststyle.input") + " input"} />
+      <textarea placeholder={t("teststyle.textarea") + " textarea"}></textarea>
       <select>
-        <option value="one">选择1 select&gt;option+</option>
-        <option value="two">选择2</option>
-        <option value="three">选择3</option>
+        <option value="one">{t("teststyle.choice")} 1 select&gt;option+</option>
+        <option value="two">{t("teststyle.choice")} 2</option>
+        <option value="three">{t("teststyle.choice")} 3</option>
       </select>
-      <div className="hint error">错误提示.hint.error</div>
-      <div className="hint warn">警告提示.hint.warn</div>
-      <div className="hint success">成功提示.hint.success</div>
+      <div className="hint error">
+        {t("teststyle.hint.err")} div.hint.error
+      </div>
+      <div className="hint warn">
+        {t("teststyle.hint.warn")} div.hint.warn
+      </div>
+      <div className="hint success">
+        {t("teststyle.hint.suc")} div.hint.success
+      </div>
       <ul>
-        <li>列表ul&gt;li+</li>
-        <li>列表</li>
-        <li>列表</li>
+        <li>{t("teststyle.list")} ul&gt;li+</li>
+        <li>{t("teststyle.list")}</li>
+        <li>{t("teststyle.list")}</li>
       </ul>
       <div className="cards">
-        <a href="javascript:;">
-          <div className="card">
-            <h3>卡片</h3>
-            <p className="description">div.cards&gt;a+&gt;div.card&gt;{"{h3, p.description}"}</p>
-          </div>
-        </a>
-        <a href="javascript:;">
-          <div className="card">
-            <h3>卡片</h3>
-            <p className="description">Lorem ipsum dolor sit amet.</p>
-          </div>
-        </a>
-        <a href="javascript:;">
-          <div className="card">
-            <h3>卡片</h3>
-            <p className="description">Lorem ipsum dolor sit amet.</p>
-          </div>
-        </a>
+        <Card
+          title={t("teststyle.card")}
+          content="div.cards&gt;a+&gt;div.card&gt;{h3, p.description}"
+          link=""
+        />
+        <Card
+          title={t("teststyle.card")}
+          content="Lorem ipsum dolor sit amet"
+          link=""
+        />
+        <Card
+          title={t("teststyle.card")}
+          content="Lorem ipsum dolor sit amet"
+          link=""
+        />
       </div>
       <table>
-        <tr>
-          <th>表格列table&gt;tr&gt;th+</th>
-          <th>表格列</th>
-        </tr>
-        <tr>
-          <td>表格值table&gt;tr+&gt;td+</td>
-          <td>表格值</td>
-        </tr>
-        <tr>
-          <td>表格值</td>
-          <td>表格值</td>
-        </tr>
+        <thead>
+          <tr>
+            <th>{t("teststyle.table.col")} table&gt;thead&gt;tr&gt;th+</th>
+            <th>{t("teststyle.table.col")}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{t("teststyle.table.value")} table&gt;tbody&gt;tr+&gt;td+</td>
+            <td>{t("teststyle.table.value")}</td>
+          </tr>
+          <tr>
+            <td>{t("teststyle.table.value")}</td>
+            <td>{t("teststyle.table.value")}</td>
+          </tr>
+        </tbody>
       </table>
       <div className="timeline">
-        <div className="timeline-item">
-          <div className="timeline-dot"></div>
-          <div className="timeline-date">时间线</div>
-          <div className="timeline-content">
-            <p>.timeline&gt;.timeline-item+&gt;{"{.timeline-dot, .timeline-date, .timeline-content&gt;p}"}</p>
-          </div>
-        </div>
+        <Timeline
+          datetime={t("teststyle.timeline")}
+          content=".timeline&gt;.timeline-item+&gt;{.timeline-dot, .timeline-date, .timeline-content&gt;p}"
+        />
       </div>
     </>
   )

@@ -1,30 +1,15 @@
 import { styled } from 'styled-components';
 import { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
+import { Card } from './modules/components';
 
-interface CardProps {
-  title: string,
-  content: string,
-  link: string
-}
-
-function Card({ title, content, link }: CardProps) {
-  return (
-    <a href={link} target="_blank">
-      <div className="card">
-        <h3>{title}</h3>
-        <p className="description">
-          {content}
-        </p>
-      </div>
-    </a>
-  )
-}
 
 function HomepageContent() {
+  const { t } = useTranslation();
   return (
     <>
       <form method="get" action="https://cn.bing.com/search" style={{ display: "flex" }}>
-        <input name="q" placeholder="在必应搜索" style={
+        <input name="q" placeholder={t("index.search_via_bing")} style={
           {
             flex: 1,
             borderTopRightRadius: 0,
@@ -39,22 +24,24 @@ function HomepageContent() {
         }>=&gt;</button>
       </form>
       <div className="hint warn">
-        <p>该网站使用React重写</p>
+        <p>{t("index.rewritten_using_react")}</p>
       </div>
       <div className="cards">
         <Card
-          title='本站仓库'
-          content='查看本站的源代码'
+          title={t("index.siterepo.title")}
+          content={t("index.siterepo.content")}
           link='https://github.com/LiaoxyuCM/liaoxyucmTop_reacted'
+          targetblank={true}
         />
         <Card
-          title='反馈问题'
-          content='发现Bug? 或者有任何建议?'
+          title={t("index.feedback.title")}
+          content={t("index.feedback.content")}
           link='https://github.com/LiaoxyuCM/liaoxyucmTop_reacted/issues'
+          targetblank={true}
         />
         <Card
-          title='样式测试'
-          content='测试各种HTML元素的样式展示'
+          title={t("index.teststyle.title")}
+          content={t("index.teststyle.content")}
           link='/styletest'
         />
       </div>
@@ -63,6 +50,7 @@ function HomepageContent() {
 }
 
 function NavBar() {
+  const { t, i18n } = useTranslation();
   const [isUnscrolled, setIsUnscrolled] = useState(true);
 
   useEffect(() => {
@@ -82,8 +70,18 @@ function NavBar() {
     <nav className={isUnscrolled ? 'unscrolled' : ''} style={{ position: "fixed" }}>
       <a href="/">LiaoxyuCM</a>
       <div className="pc">
+        <a href="#" onClick={
+          (e) => {
+            e.preventDefault();
+            if (i18n.language === 'zh-CN') {
+              i18n.changeLanguage('en');
+            } else {
+              i18n.changeLanguage('zh-CN');
+            }
+          }
+        }>{t("translate.anotherlang")}</a>
         <a href="https://github.com/LiaoxyuCM" target="_blank">GitHub</a>
-        <a href="/friendlylinks">友链</a>
+        <a href="/friendlylinks">{t("index.nav.frdlylnks")}</a>
       </div>
     </nav>
   );
@@ -132,12 +130,13 @@ const HomepageStyles = {
 }
 
 function Homepage() {
+  const { t } = useTranslation();
   return (
     <>
       <NavBar />
       <HomepageStyles.BackImg />
       <HomepageStyles.Overlay>
-        <h1>Welcome</h1>
+        <h1>{t("index.welcome")}</h1>
         <HomepageStyles.Subtitle>
           /* LiaoxyuCM, LcmTech */
         </HomepageStyles.Subtitle>
