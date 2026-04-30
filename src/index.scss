@@ -116,8 +116,8 @@ nav {
   align-items: center;
   flex-wrap: wrap;
   background-color: var(--nav-bg-color);
-  backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
 
   padding: 0.6rem 1.2rem;
   box-shadow: 0 4px 12px var(--nav-shadow-color);
@@ -126,8 +126,8 @@ nav {
 
   &.unscrolled {
     background-color: transparent;
-    backdrop-filter: none;
     -webkit-backdrop-filter: none;
+    backdrop-filter: none;
     box-shadow: none;
   }
 
