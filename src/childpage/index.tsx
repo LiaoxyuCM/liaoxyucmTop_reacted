@@ -1,7 +1,7 @@
 import { styled } from 'styled-components';
 import { NavBar } from './modules/dynamic_components';
 import { useTranslation } from 'react-i18next';
-import { Card } from './modules/components';
+import { Card, Logos } from './modules/components';
 
 
 function HomepageContent() {
@@ -76,15 +76,6 @@ const HomepageStyles = {
     position: relative;
     z-index: 0;
   `,
-  ScrollDownSVG: styled.svg`
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 40px;
-    height: 40px;
-    animation: bounce 1.5s infinite;
-  `,
   Subtitle: styled.p`
     color: var(--subtitle-text-color);
     display: flex;
@@ -103,9 +94,7 @@ function Homepage() {
         <HomepageStyles.Subtitle>
           /* LiaoxyuCM, LcmTech */
         </HomepageStyles.Subtitle>
-        <HomepageStyles.ScrollDownSVG viewBox="0 0 24 24">
-          <path d="M12 14.5l-5-5 1.4-1.4 3.6 3.6 3.6-3.6 1.4 1.4z" />
-        </HomepageStyles.ScrollDownSVG>
+        <Logos.Scrolldown />
       </HomepageStyles.Overlay>
       <HomepageStyles.MainParent>
         <main>

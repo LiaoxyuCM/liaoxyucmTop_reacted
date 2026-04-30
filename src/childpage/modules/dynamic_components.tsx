@@ -4,27 +4,25 @@ import { useTranslation } from "react-i18next";
 export function NavBar({ advanced = false }: { advanced?: boolean }) {
   const { t, i18n } = useTranslation();
 
-  function NavBarBase() {
-    return (
-      <>
-        <a href="/">LiaoxyuCM</a>
-        <div className="pc">
-          <a href="#" onClick={
-            (e) => {
-              e.preventDefault();
-              if (i18n.language === 'zh-CN') {
-                i18n.changeLanguage('en');
-              } else {
-                i18n.changeLanguage('zh-CN');
-              }
+  let NavBarBase = () => (
+    <>
+      <a href="/">LiaoxyuCM</a>
+      <div className="pc">
+        <a href="#" onClick={
+          (e) => {
+            e.preventDefault();
+            if (i18n.language === 'zh-CN') {
+              i18n.changeLanguage('en');
+            } else {
+              i18n.changeLanguage('zh-CN');
             }
-          }>{t("translate.anotherlang")}</a>
-          <a href="https://github.com/LiaoxyuCM" target="_blank">GitHub</a>
-          <a href="/friendlylinks">{t("index.nav.frdlylnks")}</a>
-        </div>
-      </>
-    )
-  }
+          }
+        }>{t("translate.anotherlang")}</a>
+        <a href="https://github.com/LiaoxyuCM" target="_blank">GitHub</a>
+        <a href="/friendlylinks">{t("index.nav.frdlylnks")}</a>
+      </div>
+    </>
+  )
   if (advanced) {
     const [isUnscrolled, setIsUnscrolled] = useState(true);
 
