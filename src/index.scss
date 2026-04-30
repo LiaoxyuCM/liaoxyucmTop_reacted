@@ -2,20 +2,23 @@
 
 @function shadow-black($alpha: 0) {
   @return rgba(0,0,0,$alpha);
-}
+};
+@function shadow-white($alpha: 0) {
+  @return rgba(255,255,255,$alpha);
+};
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   --body-bg-color: #f8fafc;
-  --overlay-bg-color: rgba(255, 255, 255, 0.4);
+  --overlay-bg-color: #{shadow-white(0.4)};
   --body-text-color: #0f172a;
   --subtitle-text-color: #333;
   --body-link-border: #dde3ea;
   --body-link-shadow-color: #{shadow-black(0.1)};
   --body-link-hover-shadow-color: #2563eb80;
-  --body-link-bg-color: rgba(255, 255, 255, 0.8);
+  --body-link-bg-color: #{shadow-white(0.8)};
   --nav-bg-color: #ffffff80;
   --nav-border-color: #e2e8f0;
   --nav-text-color: #1e40af;
@@ -79,8 +82,8 @@
     --timeline-line: #475569;
     --timeline-point: #60a5fa;
     --timeline-card: #1e293b;
-    --list-border-color: rgba(255, 255, 255, 0.2);
-    --list-border-color-highlighted: rgba(255, 255, 255, 0.4);
+    --list-border-color: #{shadow-white(0.2)};
+    --list-border-color-highlighted: #{shadow-white(0.4)};
   }
   nav div.pe img {
     filter: invert(1);
@@ -88,12 +91,12 @@
   }
 }
 
-@mixin conffonts {
+%conffonts {
   font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif!important;
 }
 
 body {
-  @include conffonts;
+  @extend %conffonts;
   background-color: var(--body-bg-color);
   color: var(--body-text-color);
   line-height: 1.5;
@@ -183,7 +186,7 @@ h1 {
 };
 
 select {
-  @include conffonts;
+  @extend %conffonts;
 
   appearance: none;
   -webkit-appearance: none;
@@ -251,7 +254,7 @@ svg {
 }
 
 button {
-  @include conffonts;
+  @extend %conffonts;
 	padding: 8px 16px;
   border: 1px solid var(--card-border-color);
   border-radius: 8px;
@@ -413,7 +416,7 @@ button {
 }
 
 %textarea-input {
-  @include conffonts;
+  @extend %conffonts;
   background-color: var(--body-bg-color);
   color: var(--body-text-color);
   border-radius: 5px;
@@ -428,7 +431,7 @@ textarea {
 }
 
 input {
-  @include conffonts;
+  @extend %conffonts;
   @extend %textarea-input;
   padding: 8px;
   border: 1px solid var(--card-border-color);

@@ -1,12 +1,15 @@
+import { useTranslation } from "react-i18next";
+
 function FourZeroFour() {
+  let { t } = useTranslation();
   return (
     <div className="404err">
-      <h1>404 Error</h1>
+      <h1>404</h1>
       <div className="hint error">
-        <p>何也没有</p>
+        <p>{t("err.404.message")}</p>
       </div>
       <br />
-      <a href="/">回去</a>
+      <a href="/">{t("err.404.goback")}</a>
     </div>
   );
 }

@@ -12,13 +12,13 @@ function Styletest() {
       <h5>{t("teststyle.h5")} h5</h5>
       <h6>{t("teststyle.h6")} h6</h6>
       <p>
-        {t("teststyle.p")} p
-        <strong>{t("teststyle.strong")} strong</strong>
-        <em>{t("teststyle.em")} em</em>
-        <u>{t("teststyle.u")} u</u>
+        {t("teststyle.p")} p&nbsp;
+        <strong>{t("teststyle.strong")} strong</strong>&nbsp;
+        <em>{t("teststyle.em")} em</em>&nbsp;
+        <u>{t("teststyle.u")} u</u>&nbsp;
         <del>{t("teststyle.del")} del</del>
       </p>
-      <a href="#" onClick={(e)=>{e.preventDefault()}}>
+      <a href="#" onClick={(e) => { e.preventDefault() }}>
         {t("teststyle.a")} a
       </a>
       <button>{t("teststyle.button")} button</button>

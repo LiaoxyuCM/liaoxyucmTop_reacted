@@ -1,5 +1,5 @@
 import { styled } from 'styled-components';
-import { useState, useEffect } from 'react';
+import { NavBar } from './modules/dynamic_components';
 import { useTranslation } from 'react-i18next';
 import { Card } from './modules/components';
 
@@ -49,43 +49,6 @@ function HomepageContent() {
   )
 }
 
-function NavBar() {
-  const { t, i18n } = useTranslation();
-  const [isUnscrolled, setIsUnscrolled] = useState(true);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsUnscrolled(window.scrollY < 21);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    handleScroll();
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
-  return (
-    <nav className={isUnscrolled ? 'unscrolled' : ''} style={{ position: "fixed" }}>
-      <a href="/">LiaoxyuCM</a>
-      <div className="pc">
-        <a href="#" onClick={
-          (e) => {
-            e.preventDefault();
-            if (i18n.language === 'zh-CN') {
-              i18n.changeLanguage('en');
-            } else {
-              i18n.changeLanguage('zh-CN');
-            }
-          }
-        }>{t("translate.anotherlang")}</a>
-        <a href="https://github.com/LiaoxyuCM" target="_blank">GitHub</a>
-        <a href="/friendlylinks">{t("index.nav.frdlylnks")}</a>
-      </div>
-    </nav>
-  );
-}
 
 const HomepageStyles = {
   BackImg: styled.div`
@@ -133,7 +96,7 @@ function Homepage() {
   const { t } = useTranslation();
   return (
     <>
-      <NavBar />
+      <NavBar advanced={true} />
       <HomepageStyles.BackImg />
       <HomepageStyles.Overlay>
         <h1>{t("index.welcome")}</h1>
