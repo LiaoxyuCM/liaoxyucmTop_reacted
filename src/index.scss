@@ -431,7 +431,6 @@ textarea {
 }
 
 input {
-  @extend %conffonts;
   @extend %textarea-input;
   padding: 8px;
   border: 1px solid var(--card-border-color);

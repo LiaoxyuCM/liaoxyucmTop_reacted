@@ -1,7 +1,7 @@
 import { styled } from 'styled-components';
 import { NavBar } from './modules/dynamic_components';
 import { useTranslation } from 'react-i18next';
-import { Card, Logos } from './modules/components';
+import { Card, Icons } from './modules/components';
 
 
 function HomepageContent() {
@@ -29,12 +29,14 @@ function HomepageContent() {
       <div className="cards">
         <Card
           title={t("index.siterepo.title")}
+          icon_attach={<Icons.GitHub />}
           content={t("index.siterepo.content")}
           link='https://github.com/LiaoxyuCM/liaoxyucmTop_reacted'
           targetblank={true}
         />
         <Card
           title={t("index.feedback.title")}
+          icon_attach={<Icons.GitHub />}
           content={t("index.feedback.content")}
           link='https://github.com/LiaoxyuCM/liaoxyucmTop_reacted/issues'
           targetblank={true}
@@ -94,7 +96,7 @@ function Homepage() {
         <HomepageStyles.Subtitle>
           /* LiaoxyuCM, LcmTech */
         </HomepageStyles.Subtitle>
-        <Logos.Scrolldown />
+        <Icons.Scrolldown />
       </HomepageStyles.Overlay>
       <HomepageStyles.MainParent>
         <main>
