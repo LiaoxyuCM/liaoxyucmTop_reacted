@@ -1,12 +1,8 @@
-import React from 'react';
+import type { ComponentType } from 'react';
 import { NavBar } from './childpage/modules/dynamic_components';
 // import './index.scss'
 
-interface Extending {
-  element: React.ComponentType;
-}
-
-function Template(elem: Extending) {
+function Template(elem: { element: ComponentType }) {
   return (
     <>
       <NavBar />

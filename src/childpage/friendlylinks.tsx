@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import { CardFriendlyLink } from "./modules/components";
 
 function FriendlyLinksContent() {
-  const { t, i18n  } = useTranslation();
+  const { t } = useTranslation();
   return (
     <>
       <div className="cards frdlylnks">
@@ -15,14 +15,19 @@ function FriendlyLinksContent() {
           imagesrc="https://assets.liaoxyucm.top/muah.top/g.jpg"
         />
         <CardFriendlyLink
-          title={"工农阶级万岁🅥" + (i18n.language === 'en' ? "?" : "")}
-          content={t("frdlylnks.gnjjws.content")}
+          title="工农阶级万岁🅥"
+          content={"© 2025 " + t("frdlylnks.gnjjws.content")}
           link="https://zh2026.cn"
           imagesrc="https://assets.liaoxyucm.top/zh2026.cn/tx.jpg"
         />
+        <CardFriendlyLink
+          title="ZI"
+          content={t("frdlylnks.zi.content")}
+          link="https://tunhs.mysxl.cn"
+          imagesrc="https://assets.liaoxyucm.top/tunhs.mysxl.cn/icon.jpg"
+        />
       </div>
 
-      {i18n.language === 'en' ? <small>?: The translated text has not been determined yet; please do not make any unauthorized changes</small> : <></>}
     </>
   )
 }

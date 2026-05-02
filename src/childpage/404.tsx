@@ -13,5 +13,4 @@ function FourZeroFour() {
     </div>
   );
 }
-
 export default FourZeroFour
