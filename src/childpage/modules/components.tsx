@@ -9,10 +9,10 @@ interface BaseCardProps {
 
 interface CardProps extends BaseCardProps {
   icon_attach?: ReactNode;
-  displayable?: boolean;
+  visible?: boolean;
 }
 
-export function Card({ title, icon_attach, content, link, displayable = true, targetblank = false }: CardProps) {
+export function Card({ title, icon_attach, content, link, visible = true, targetblank = false }: CardProps) {
   return (
     <a
       href={link ? link : "#"}
@@ -22,7 +22,7 @@ export function Card({ title, icon_attach, content, link, displayable = true, ta
           (e) => { e.preventDefault() }
       }
       target={targetblank ? "_blank" : ""}
-      style={{ display: displayable ? "block" : "none" }}
+      style={{ display: visible ? "block" : "none" }}
     >
       <div className="card">
         <h3>{title}{icon_attach}</h3>

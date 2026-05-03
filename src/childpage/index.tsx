@@ -117,7 +117,7 @@ function HomepageContent() {
               content={card.content}
               icon_attach={card.filter.includes("red2gh") ? <Icons.GitHub /> : <></>}
               targetblank={card.targetblank}
-              displayable={visible}
+              visible={visible}
             />
           );
         })}
