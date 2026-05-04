@@ -25,6 +25,5 @@ npm run build # Build 构建 (Will be output to dist/ 将输出到 dist/)
    version number. If you want to update the major version, please open
    an issue first and discuss it with me/us.
 
-   除非这个更新真的很重要，否则**不要**移动主版本号。
+   除非这个更新真的很重要，否则**不要**乱动主版本号。
    如果你想更新主版本，请先开一个 issue 并与我\(们\)讨论。
-

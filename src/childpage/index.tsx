@@ -1,7 +1,7 @@
 import { styled } from 'styled-components';
 import { NavBar } from './modules/dynamic_components';
 import { useTranslation } from 'react-i18next';
-import { Card, Icons } from './modules/components';
+import { Card, Icons, FooterBase } from './modules/components';
 import { useState } from 'react';
 
 function HomepageContent() {
@@ -115,7 +115,7 @@ function HomepageContent() {
               link={card.link}
               title={card.title}
               content={card.content}
-              icon_attach={card.filter.includes("red2gh") ? <Icons.GitHub /> : <></>}
+              iconAttach={card.filter.includes("red2gh") ? <Icons.GitHub /> : <></>}
               targetblank={card.targetblank}
               visible={visible}
             />
@@ -179,7 +179,7 @@ function Homepage() {
         </main>
       </HomepageStyles.MainParent>
       <section className="footer" style={{ margin: 0 }}>
-        <p>&copy; LiaoxyuCM × LcmTech 2024-2026</p>
+        <FooterBase />
       </section>
     </>
   )

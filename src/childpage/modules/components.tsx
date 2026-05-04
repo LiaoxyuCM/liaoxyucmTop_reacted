@@ -8,11 +8,11 @@ interface BaseCardProps {
 }
 
 interface CardProps extends BaseCardProps {
-  icon_attach?: ReactNode;
+  iconAttach?: ReactNode;
   visible?: boolean;
 }
 
-export function Card({ title, icon_attach, content, link, visible = true, targetblank = false }: CardProps) {
+export function Card({ title, iconAttach, content, link, visible = true, targetblank = false }: CardProps) {
   return (
     <a
       href={link ? link : "#"}
@@ -25,7 +25,7 @@ export function Card({ title, icon_attach, content, link, visible = true, target
       style={{ display: visible ? "block" : "none" }}
     >
       <div className="card">
-        <h3>{title}{icon_attach}</h3>
+        <h3>{title}{iconAttach}</h3>
         <p className="description">
           {content}
         </p>
@@ -76,6 +76,12 @@ export function Timeline({ datetime, content }: TimelineProps) {
         <p>{content}</p>
       </div>
     </div>
+  )
+}
+
+export function FooterBase() {
+  return (
+    <p>&copy; LiaoxyuCM × LcmTech 2024-2026</p>
   )
 }
 
