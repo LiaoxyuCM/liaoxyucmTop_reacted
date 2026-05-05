@@ -343,14 +343,7 @@ button {
         background: linear-gradient(145deg, var(--nav-bg-color), var(--card-link-hover-color));
         
         h3::after {
-          content: '';
-          position: absolute;
-          bottom: -4px;
-          left: 0;
-          width: 0;
-          height: 2px;
-          background: linear-gradient(90deg, var(--card-title-bg-gradient-left), var(--card-border-color));
-          transition: width 0.3s ease;
+          width: 40px;
         }
       }
     }

@@ -9,7 +9,7 @@ function FriendlyLinksContent() {
         <CardFriendlyLink
           title={t("frdlylnks.huayumomo")}
           content={
-            `2024 - 2026 & ${t("frdlylnks.huayumomo.moking")} & ${t("frdlylnks.huayumomo.chenqingmua")}`
+            `2024 - 2026 ${t("frdlylnks.huayumomo.moking")} & ${t("frdlylnks.huayumomo.chenqingmua")}`
           }
           link="https://muah.top"
           imagesrc="https://assets.liaoxyucm.top/muah.top/g.jpg"

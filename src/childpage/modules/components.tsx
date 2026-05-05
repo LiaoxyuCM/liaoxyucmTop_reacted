@@ -38,7 +38,7 @@ interface CardFriendlyLinkProps extends BaseCardProps {
   imagesrc: string
 }
 
-export function CardFriendlyLink({ title, content, link, imagesrc, targetblank = false }: CardFriendlyLinkProps) {
+export function CardFriendlyLink({ title, content, link, imagesrc, targetblank = true }: CardFriendlyLinkProps) {
   return (
     <a
       href={link ? link : "#"}
