@@ -27,3 +27,26 @@ npm run build # Build 构建 (Will be output to dist/ 将输出到 dist/)
 
    除非这个更新真的很重要，否则**不要**乱动主版本号。
    如果你想更新主版本，请先开一个 issue 并与我\(们\)讨论。
+
+## Preview Results 预览结果
+
+### Online (Recommended) 在线 (推荐)
+
+View the preview at `https://reactdemo.liaoxyucm.top`
+在 `https://reactdemo.liaoxyucm.top` 查看预览
+
+### Offline (For Developers) 离线 (开发者)
+
+After you run `npm run build`, you can find the output in the `dist/` folder.
+在你运行 `npm run build` 后，你可以在 `dist/` 文件夹中找到输出。
+
+You need to start a server to listen `dist/`, set the entry point to `index.html`
+你需要开一个服务器 `dist/` ，并将入口点设置为 `index.html`
+
+Run the following command in the terminal to serve the `dist/` folder using `live-server`:
+运行以下命令在终端使用 `live-server` 来启动服务器监听 `dist/` 文件夹：
+
+```sh
+npm install -g live-server # if you don't have one 如果你还没有live-server
+npx live-server dist/ --entry-file=index.html
+```
