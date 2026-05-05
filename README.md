@@ -41,10 +41,7 @@ After you run `npm run build`, you can find the output in the `dist/` folder.
 在你运行 `npm run build` 后，你可以在 `dist/` 文件夹中找到输出。
 
 You need to start a server to listen `dist/`, set the entry point to `index.html`
-你需要开一个服务器 `dist/` ，并将入口点设置为 `index.html`
-
-Run the following command in the terminal to serve the `dist/` folder using `live-server`:
-运行以下命令在终端使用 `live-server` 来启动服务器监听 `dist/` 文件夹：
+你需要开一个服务器来监听 `dist/` ，并将入口点设置为 `index.html`
 
 ```sh
 npm install -g live-server # if you don't have one 如果你还没有live-server
