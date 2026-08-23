@@ -61,7 +61,7 @@ def helloView(request: HttpRequest):
         placeholder={te("textarea") + " textarea"}>
       </textarea>
       <select name="namefield.teststyle.select">
-        {[" select>option+", "", ""].map((value, index) => (
+        {[" select>option+", "", ""].map((value: string, index: number) => (
           <option key={index} value={`opt_${index}`}>{te("choice") + `${index}${value}`}</option>
         ))}
       </select>
@@ -83,14 +83,14 @@ def helloView(request: HttpRequest):
       <br />
       <p>{te('hintgroup')} .hintgroup&gt;.hint</p>
       <div className="hintgroup">
-        {['error', 'warn', 'success', 'info', 'debug'].map((type) => (
+        {['error', 'warn', 'success', 'info', 'debug'].map((type: string) => (
           <div className={`hint ${type}`} key={type}>
             {t(`teststyle.lvl.${type}`) + te('hint.default')} div.hint.{type}
           </div>
         ))}
       </div>
       <ul>
-        {[" ul>li+", "", ""].map((value, index) => (
+        {[" ul>li+", "", ""].map((value: string, index: number) => (
           <li key={index}>{te("list") + value}</li>
         ))}
       </ul>
@@ -156,7 +156,7 @@ const ParamThead = () => {
   return (
     <thead>
       <tr>
-        {["name", "type", "required", "default"].map((key) => (
+        {["name", "type", "required", "default"].map((key: string) => (
           <th key={key}>{t("teststyle.doc.components.param." + key)}</th>
         ))}
       </tr>

@@ -18,7 +18,7 @@ interface CardProps extends BaseCardProps {
 export function Card({ title, iconAttach, content, link, visible = true, targetblank = false }: CardProps) {
   return (
     <a
-      href={link ? link : "#"}
+      href={link || "#"}
       onClick={
         link ?
           void 0 :
