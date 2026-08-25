@@ -63,10 +63,10 @@ export default function HomepageContent() {
       filter: ["thissite", "sitetool"]
     },
     {
-      link: 'https://tools.liaoxyucm.top/randompicker',
-      title: t("content.card.randompicker.title"),
-      content: t("content.card.randompicker.content"),
-      filter: ["thissite", "sitetool"]
+      link: 'https://liaoxyucm.top/demo',
+      title: t("content.card.earlyproj.title"),
+      content: t("content.card.earlyproj.content"),
+      filter: ["thissite", "program"]
     }
   ];
 

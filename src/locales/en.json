@@ -71,9 +71,9 @@
         "title": "Text tools",
         "content": "The tool set of processing text."
       },
-      "randompicker": {
-        "title": "Random Picker",
-        "content": "Generate random number(s)"
+      "earlyproj": {
+        "title": "Early Projects",
+        "content": "Projects with less coding skills."
       }
     },
     "filter": {
@@ -144,6 +144,10 @@
       "input": {
         "content": "Enter toast content",
         "duration": "Enter duration (ms), default: 2000"
+      },
+      "onclick": {
+        "remove": "Remove onclick",
+        "redirect": "Redirect (2 an url) onclick"
       },
       "default": "Default Toast Content",
       "onclick_redirect.input": "Enter URL, eg. URL refers 2 "

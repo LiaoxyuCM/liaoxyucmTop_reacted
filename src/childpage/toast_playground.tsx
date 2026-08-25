@@ -32,7 +32,7 @@ export default function ToastPlayground() {
         borderTopRightRadius: 0
       }} type="text" placeholder={t("teststyle.toast.input.content")} />
 
-      <h3>onclick=remove</h3>
+      <h3>{t("teststyle.toast.onclick.remove")}</h3>
       <div style={{ display: "flex" }}>
         <button
           onClick={() => {
@@ -54,7 +54,7 @@ export default function ToastPlayground() {
         </button>
       </div>
 
-      <h3>onclick=redirect</h3>
+      <h3>{t("teststyle.toast.onclick.redirect")}</h3>
       <div style={{ display: "flex" }}>
         <input ref={urlInputRef} style={{
           flex: "1 1 0%",

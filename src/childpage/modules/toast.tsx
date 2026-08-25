@@ -30,9 +30,9 @@ export const ToastOnclickAction = {
 const activeToasts: { element: HTMLElement; height: number }[] = [];
 
 const updateToastPositions = () => {
-  let accumulatedHeight = 60;
+  let accumulatedHeight: number = 60;
   activeToasts.forEach((toast: { element: HTMLElement; height: number }) => {
-    const topPosition = accumulatedHeight;
+    const topPosition: number = accumulatedHeight;
     toast.element.style.top = `${topPosition}px`;
     accumulatedHeight += toast.height + 10;
   });
@@ -134,7 +134,7 @@ const showToast_ = ( // 竟让我手动操作DOM
 
 export const showToast = {
   // showToast调用方法:
-  // --- 组件顶层请使用Hook
+  // --- 组件函数顶层请使用Hook
   // --- 否则使用nohook
   nohook: showToast_,
   Hook: ( // React项目标准: 所有的hooks要么use开头, 要么首字母大写

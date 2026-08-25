@@ -71,9 +71,9 @@
         "title": "文本处理",
         "content": "处理文本的工具集"
       },
-      "randompicker": {
-        "title": "随机数生成器",
-        "content": "生成随机数"
+      "earlyproj": {
+        "title": "早期作品",
+        "content": "由于很早, 技术量很少"
       }
     },
     "filter": {
@@ -144,6 +144,10 @@
       "input": {
         "content": "输入内容",
         "duration": "输入持续时间 (ms), 默认: 2000"
+      },
+      "onclick": {
+        "remove": "点击时移除",
+        "redirect": "点击时跳转 (链接)"
       },
       "default": "默认信息框信息",
       "onclick_redirect.input": "输入链接, 例如这个链接指向 "
