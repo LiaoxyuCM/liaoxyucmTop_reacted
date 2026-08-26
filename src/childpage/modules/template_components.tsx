@@ -86,7 +86,6 @@ const NavBarBase = (
 )
 
 export function NavBar({ advanced = false }: { advanced?: boolean }) {
-  // const { t, i18n } = useTranslation();
   const [isMobile, setIsMobile] = useState<boolean>(false);
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const [isUnscrolled, setIsUnscrolled] = useState<boolean>(advanced);

@@ -29,7 +29,7 @@
     "comingup": {
       "main": "The new version of the homepage is under construction, and the original content has been moved to ",
       "here": "here",
-      "missing_smooth_transition": "If you missed the smooth transition of the cursor in pre0, please add the below content to this URL."
+      "smooth_transition": "To enable the feature of smooth transition of cursor, please add the below content to this URL."
     },
     "about": {
       "p1": "Hi, I'm LiaoxyuCM(Lclimir), ... (Actually I didn't know what to write), anyway, here is the hello.",
@@ -71,9 +71,9 @@
         "title": "Text tools",
         "content": "The tool set of processing text."
       },
-      "randompicker": {
-        "title": "Random Picker",
-        "content": "Generate random number(s)"
+      "earlyproj": {
+        "title": "Early Projects",
+        "content": "Projects with less coding skills."
       }
     },
     "filter": {
@@ -144,6 +144,10 @@
       "input": {
         "content": "Enter toast content",
         "duration": "Enter duration (ms), default: 2000"
+      },
+      "onclick": {
+        "remove": "Remove onclick",
+        "redirect": "Redirect (2 an url) onclick"
       },
       "default": "Default Toast Content",
       "onclick_redirect.input": "Enter URL, eg. URL refers 2 "

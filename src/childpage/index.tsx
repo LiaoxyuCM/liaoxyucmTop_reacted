@@ -13,34 +13,18 @@ function Homepage() {
   const [loading, setLoading] = useState<boolean>(true);
   const [bgLoaded, setBgLoaded] = useState<boolean>(false);
 
-  let greet: string = "";
-  switch (new Date().getHours()) {
-    case 0: case 1: case 2: case 3: case 4: case 5:
-      greet = "late_night";
-      break
-    case 6: case 7: case 8:
-      greet = "morning";
-      break;
-    case 9: case 10:
-      greet = "forenoon";
-      break;
-    case 11: case 12:
-      greet = "noon";
-      break;
-    case 13: case 14: case 15:
-      greet = "afternoon_early";
-      break;
-    case 16: case 17: case 18:
-      greet = "afternoon";
-      break;
-    case 19: case 20: case 21:
-      greet = "evening";
-      break;
-    case 22: case 23:
-      greet = "night";
-      break;
-  }
+  const timeRanges: {max: number, value: string}[] = [
+    { max: 5, value: 'late_night' },
+    { max: 8, value: 'morning' },
+    { max: 10, value: 'forenoon' },
+    { max: 12, value: 'noon' },
+    { max: 15, value: 'afternoon_early' },
+    { max: 18, value: 'afternoon' },
+    { max: 21, value: 'evening' },
+    { max: 23, value: 'night' }
+  ];
 
+  const greet: string = timeRanges.find(range => (new Date().getHours()) <= range.max)?.value || '';
 
   useEffect(() => {
     if (bgLoaded && i18n.isInitialized) {
@@ -110,7 +94,7 @@ function Homepage() {
                         {t("index.comingup.here")}
                       </a>
                       <br />
-                      {t("index.comingup.missing_smooth_transition")}
+                      {t("index.comingup.smooth_transition")}
                     </p>
 
                     <CodeField code="#smooth-transition" />
@@ -126,7 +110,7 @@ function Homepage() {
                   {
                     name: "portfolio",
                     el: <>
-                      <p>{t("index.portfolio")}</p>
+                      <h3>{t("index.portfolio")}</h3>
                       <div className="cards">
                         <Card
                           title="lcmtop_reacted"
@@ -139,7 +123,7 @@ function Homepage() {
                   {
                     name: "contact",
                     el: <>
-                      <p>{t("index.contact")}</p>
+                      <h3>{t("index.contact")}</h3>
                       <ul>
                         <li><a href="mailto:me@liaoxyucm.top">me@liaoxyucm.top</a></li>
                         <li><a href="https://github.com/LiaoxyuCM">GitHub</a></li>
