@@ -29,7 +29,7 @@
     "comingup": {
       "main": "The new version of the homepage is under construction, and the original content has been moved to ",
       "here": "here",
-      "missing_smooth_transition": "If you missed the smooth transition of the cursor in pre0, please add the below content to this URL."
+      "smooth_transition": "To enable the feature of smooth transition of cursor, please add the below content to this URL."
     },
     "about": {
       "p1": "Hi, I'm LiaoxyuCM(Lclimir), ... (Actually I didn't know what to write), anyway, here is the hello.",

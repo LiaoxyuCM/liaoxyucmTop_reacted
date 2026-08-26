@@ -29,7 +29,7 @@
     "comingup": {
       "main": "新版主页正在建设中, 原内容已移动到",
       "here": "这里",
-      "missing_smooth_transition": "若想念pre0的光标缓动请在URL后面加上"
+      "smooth_transition": "若要启用光标缓动请在URL后面加上"
     },
     "about": {
       "p1": "你好, 我叫LiaoxyuCM(Lclimir), ... (其实也不知道写啥), 反正就是你好啊.",

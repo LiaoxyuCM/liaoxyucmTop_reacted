@@ -94,7 +94,7 @@ function Homepage() {
                         {t("index.comingup.here")}
                       </a>
                       <br />
-                      {t("index.comingup.missing_smooth_transition")}
+                      {t("index.comingup.smooth_transition")}
                     </p>
 
                     <CodeField code="#smooth-transition" />
@@ -110,7 +110,7 @@ function Homepage() {
                   {
                     name: "portfolio",
                     el: <>
-                      <p>{t("index.portfolio")}</p>
+                      <h3>{t("index.portfolio")}</h3>
                       <div className="cards">
                         <Card
                           title="lcmtop_reacted"
@@ -123,7 +123,7 @@ function Homepage() {
                   {
                     name: "contact",
                     el: <>
-                      <p>{t("index.contact")}</p>
+                      <h3>{t("index.contact")}</h3>
                       <ul>
                         <li><a href="mailto:me@liaoxyucm.top">me@liaoxyucm.top</a></li>
                         <li><a href="https://github.com/LiaoxyuCM">GitHub</a></li>
