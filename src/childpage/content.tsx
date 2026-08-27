@@ -20,7 +20,7 @@ export default function HomepageContent() {
     link: string,
     title: string,
     content: string,
-    filter: string[],
+    filter: [string, string],
     targetblank?: boolean
   }[] = [
     {
