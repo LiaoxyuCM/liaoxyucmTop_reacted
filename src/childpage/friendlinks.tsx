@@ -3,7 +3,12 @@ import { CardFriendLink } from "./modules/components";
 
 function FriendLinksContent() {
   const { t } = useTranslation();
-  const friendlinksData = [
+  const friendlinksData: {
+    link: string,
+    title: string,
+    content: string,
+    imagesrc: string
+  }[] = [
     {
       link: "https://muah.top",
       title: "NexaCore",
@@ -32,7 +37,7 @@ function FriendLinksContent() {
   return (
     <>
       <div className="cards friendlinks">
-        {friendlinksData.map((value, index) => (
+        {friendlinksData.map((value, index: number) => (
           <CardFriendLink
             key={index}
             title={value.title}
