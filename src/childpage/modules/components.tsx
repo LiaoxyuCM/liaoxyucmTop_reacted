@@ -97,7 +97,7 @@ export function SelectBar(
 
   return (
     <div className="selectbar">
-      {choices.map((choice, index) => (
+      {choices.map((choice: string, index) => (
         <div
           className={"choice" + (selectedIndex == index ? " selected" : "")}
           key={index}
