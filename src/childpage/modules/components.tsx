@@ -70,7 +70,7 @@ interface TimelineProps {
   content: string
 }
 
-export function Timeline({ datetime, content }: TimelineProps) {
+export function TimelineItem({ datetime, content }: TimelineProps) {
   return (
     <div className="timeline-item">
       <div className="timeline-dot"></div>
